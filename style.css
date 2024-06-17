@@ -1,0 +1,151 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('imagens/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    height: 40px;
+    width: 305px;
+    display: flex;
+    font-style: 'Pacifico', cursive;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(1, 11, 201, 0.803);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: rgb(255, 149, 0);
+}
+
+h2 {
+    font-style: 'Pacifico', cursive;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(1, 11, 201, 0.803);
+    text-align: center;
+    color: rgb(255, 149, 0);
+}
+
+#player-input, #game-status {
+    margin-bottom: 20px;
+}
+
+.elapsed-time {
+    border-radius: 5px;
+    width: 90px;
+    padding: 4px;
+    height: 15px;
+    font-style: oblique;
+    text-align: center;
+    background-color: rgb(1, 11, 201, 0.803);
+    color: rgb(255, 149, 0);
+}
+
+.begin-button {
+    border-radius: 5px;
+    background-color: rgb(1, 11, 201, 0.803);
+    color:rgb(255, 149, 0);
+}
+
+.restart-button {
+    border-radius: 5px;
+    background-color: rgb(1, 11, 201, 0.803);
+    color: rgb(255, 149, 0);
+}
+
+.leaderboard {
+    border-radius: 5px;
+    background-color: rgb(1, 11, 201, 0.803);
+    color: rgb(255, 149, 0);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin-top: 20px;
+}
+
+#memory-game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(1, 11, 201, 0.803);
+    border: 2px solid rgb(1, 11, 201, 0.803);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card .card-front, .card .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card .card-front {
+    background-color: rgb(1, 11, 201, 0.803);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(0deg);
+}
+
+.card .card-back {
+    transform: rotateY(180deg);
+    background-size: cover;
+}
+
+.card.image1 .card-back { background-image: url('imagens/abacaxi.jpg')}
+.card.image2 .card-back { background-image: url('imagens/goiaba.jpg')}
+.card.image3 .card-back { background-image: url('imagens/laranja.jpg');}
+.card.image4 .card-back { background-image: url('imagens/maca.jpg')}
+.card.image5 .card-back { background-image: url('imagens/manga.jpg');}
+.card.image6 .card-back { background-image: url('imagens/melancia.jpg');}
+.card.image7 .card-back { background-image: url('imagens/pessego.jpg');}
+.card.image8 .card-back { background-image: url('imagens/uva.jpg');}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 1.5em;
+    background-color: rgb(1, 11, 201, 0.803);
+    border-radius: 5px;
+    color: rgb(255, 149, 0);
+}
+
+#leaderboard {
+    list-style: none;
+    padding: 0;
+}
