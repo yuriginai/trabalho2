@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLeaderboard(playerNameInput.value, totalTime);
     }
 
-    // Evento de teclado para pressionar 'G' e vencer o jogo instantaneamente
+    // Evento de teclado para pressionar 'P' e vencer o jogo instantaneamente
     document.addEventListener('keydown', (event) => {
         if (event.key === 'p' || event.key === 'P') {
             if (playerNameInput.value.trim() !== '') {
